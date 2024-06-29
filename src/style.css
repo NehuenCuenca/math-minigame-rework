@@ -40,6 +40,18 @@ img, picture, video, canvas, svg {
 input, button, textarea, select {
   font: inherit;
 }
+button{
+  background-color: transparent;
+  border: none;
+}
+
 p, h1, h2, h3, h4, h5, h6 {
   overflow-wrap: break-word;
+}
+
+#app{
+  min-height: 100dvh;
+  display: flex;  
+  flex-direction: column;
+  justify-content: space-between;
 }
