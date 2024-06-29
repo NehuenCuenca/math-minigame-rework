@@ -1,0 +1,45 @@
+:root {
+  background-color: #EEF5FF;
+  --display-font: 'Balsamiq Sans', Tahoma;
+  --default-font: 'Nunito sans', sans-serif, Arial;
+  --black: #000000;
+  --white: #FFFFFF;
+  --clay: #EEF5FF;
+  --sky-1: #B4D4FF;
+  --sky-2: #86B6F6;
+  --dark-teal: #176B87;
+}
+
+[data-theme="light"] {
+  --color-bg: var(--clay);
+  --color-font: var(--dark-teal);
+  --color-shadow: rgba(0,0,0, 0.25);
+}
+
+[data-theme="dark"] {
+  --color-bg: var(--dark-teal);
+  --color-font: var(--clay);
+  --color-shadow: transparent;
+}
+
+/* RESETS */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+}
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+input, button, textarea, select {
+  font: inherit;
+}
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
