@@ -1,14 +1,22 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+
+</script>
 
 <template>
   <header class="header">
     <h1 class="header__title">Mini-juego de Matemáticas</h1>
-    <button type="button" class="header__theme-toggler">🌑/☀</button>
+    <button type="button" class="header__theme-toggler"><i class='bx bxs-moon bx-md'></i> / <i class='bx bxs-sun bx-md'></i></button>
   </header>
   <main class="main-menu">
     <div class="menu-buttons">
-      <button type="button" class="primary-button">Empezar juego</button>
-      <button type="button" class="terciary-button">Leer tutorial</button>
+      <button type="button" class="primary-button">
+        <i class='bx bx-play bx-md'></i> 
+        <span>Empezar juego</span>
+      </button>
+      <button type="button" class="terciary-button">
+        <i class='bx bxs-info-circle bx-md'></i>
+        <span>Leer tutorial</span>
+        </button>
     </div>
   </main>
   <footer class="footer">
@@ -52,12 +60,15 @@
   font: normal normal 400 clamp(1.8rem, 5vw, 2rem) var(--display-font);
   border: none;
   border-radius: 5px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
 }
 
 .primary-button{
   background-color: var(--color-font);
   color: var(--color-bg);
-  padding: .5rem 1rem;
+  padding: 1rem;
   box-shadow: 2px 2px 12px 1px rgba(0, 0, 0, 0.7);
 }
 .terciary-button{
@@ -70,5 +81,9 @@
   font: normal normal 400 clamp(1.3rem, 5vw, 1.6rem) var(--display-font);
   text-align: center;
   padding: 1rem;
+}
+
+.bxs-info-circle{
+  color: var(--color-font);
 }
 </style>
