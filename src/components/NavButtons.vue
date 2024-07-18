@@ -12,8 +12,8 @@
 </template>
 
 <script setup lang="ts">
-const emits = defineEmits(['handleBackToMenu', 'handleRestartGame'])
-const props = defineProps(['userIsPlaying'])
+  const emits = defineEmits(['handleBackToMenu', 'handleRestartGame'])
+  const props = defineProps(['userIsPlaying'])
 </script>
 
 <style scoped>
@@ -21,18 +21,20 @@ const props = defineProps(['userIsPlaying'])
   width: 100%;
   display: flex;
   justify-content: space-between;
-  margin-bottom: 2.5rem;
+  margin-bottom: 1.5rem;
+  padding: 0 1rem;
 }
 
 
 .restart-button,
 .back-to-menu-button{
-  font: normal normal 400 clamp(1.3rem, 5vw, 5rem) var(--display-font);
+  font: normal normal 400 clamp(1.3rem, 5vw, 1.6rem) var(--display-font);
 }
 .back-to-menu-button{
     color: var(--color-font);
 }
 .restart-button{
     text-wrap: balance;
+    padding: 1rem .5rem;
 }
 </style>
