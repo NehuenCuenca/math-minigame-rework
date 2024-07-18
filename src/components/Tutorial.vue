@@ -28,6 +28,7 @@
     text-decoration: underline;
 }
 .tutorial-container__text{
+    max-width: clamp(20rem, 50vw, 40rem);
     padding: 1rem ;
     font: normal normal 400 clamp(1.5rem, 5vw, 1.7rem) var(--default-font);
     text-align: justify;
