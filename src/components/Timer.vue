@@ -14,12 +14,12 @@
         },
     })
 
-    const interval = ref(null)
+    const interval = ref(0)
     const seconds = ref(0)
 
     const stopInterval = () => { 
         clearInterval(interval.value)
-        interval.value = null
+        interval.value = 0
         emits('timerStop', {seconds: seconds.value})
     }
 
@@ -31,7 +31,7 @@
         interval.value = intervalId
     })
 
-    watch(() => props.finish, (newValue, oldValue) => {
+    watch(() => props.finish, () => {
         stopInterval()
     })
 </script>
