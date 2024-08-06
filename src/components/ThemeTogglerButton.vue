@@ -6,10 +6,10 @@
 </template>
 
 <script setup lang="ts">
-    import { ref, computed } from 'vue';
+    import { ref } from 'vue';
 
     const htmlElement  = ref(document.querySelector("html"))
-    const currentTheme = ref(document.querySelector("html").getAttribute("data-theme"))
+    const currentTheme = ref(document.querySelector("html").getAttribute("data-theme") || null)
     
     const changeTheme = () => {
         if(currentTheme.value === 'light'){
@@ -23,6 +23,4 @@
 
 </script>
 
-<style scoped>
-
-</style>computed, computed, 
+<style scoped></style>
