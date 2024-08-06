@@ -76,11 +76,6 @@
     }
 
     const finishGame = () => { 
-        console.log({
-            calcs: calculations.value,
-            timePlayed: timePlayed.value,
-        });
-
         hasGameFinish.value = true
     }
 </script>

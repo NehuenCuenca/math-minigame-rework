@@ -23,7 +23,7 @@
 </template>
 
 <script setup lang="ts">
-    import { ref, computed } from 'vue';
+    import { ref } from 'vue';
 
     const props = defineProps(['quantityCalculations', 'calculations', 'timePlayed'])
 
@@ -64,7 +64,7 @@
 .row-stat__subtitle{
     width: 100%;
     text-align: center;
-    background-color: rgba(0,0,0, 0.1);
+    background-color:rgba(255,255,255, .1);
     font: normal normal 400 clamp(1.5rem, 5vw, 1.7rem) var(--default-font);
     color: var(--color-font);
 }
