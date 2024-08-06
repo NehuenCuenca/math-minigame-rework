@@ -1,9 +1,9 @@
 <template>
     <form @submit.prevent="handleSubmitResult" class="result-form">
-        <input type="number" class="result-form__input" v-model.number="result" ref="resultFormInput">
-        <button type="button" class="erase-button">
+        <input type="number" class="result-form__input" v-model="result" ref="resultFormInput">
+        <button type="button" class="erase-button" @click="resetInput">
             <i class='bx bxs-eraser bx-md erase-button__icon'></i>
-            <span class="erase-button__text" @click="() => result = 0">Borrar</span>
+            <span class="erase-button__text">Borrar</span>
         </button>
     </form>
 </template>
@@ -17,12 +17,16 @@
     const result = ref('')
 
     onMounted(() => {
-        resultFormInput.value.focus()
+        resetInput()
     })
 
     const handleSubmitResult = () => { 
-        emits('submitResult', result.value)
+        emits('submitResult', Number(result.value))
 
+        resetInput()
+    }
+
+    const resetInput = () => { 
         result.value = ''
         resultFormInput.value.focus()
     }
