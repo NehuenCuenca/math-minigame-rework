@@ -6,17 +6,16 @@
             :calculation="calculations[currentCalculationIndex]" 
             :isBeingResolved="true"
             class="current-calculation">
-            <p>¿Cuanto es?</p>
+            <!-- <p>¿Cuanto es?</p> -->
         </CalculationItem>
         <CalculationItem :calculation="calculations[currentCalculationIndex+1]" />
     </ul>
 </template>
 
 <script setup lang="ts">
-    import { computed } from "vue";
     import CalculationItem from "../components/CalculationItem.vue";
 
-    const props = defineProps({
+    defineProps({
         calculations: {
             type: Array,
             required: true,
@@ -34,9 +33,6 @@
     overflow: hidden;
     position: relative;
     width: 100%;
-    /* display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    justify-items: center; */
     display: flex;
     justify-content: space-around;
     align-items: center;

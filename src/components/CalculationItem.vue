@@ -14,7 +14,8 @@
 </template>
 
 <script setup lang="ts">
-    const props = defineProps({
+    // const props = defineProps({
+    defineProps({
         calculation: {
             type: Object,
             required: true,
